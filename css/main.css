@@ -8,8 +8,21 @@ body{
 
 .wrap{
 	width: 90%;
-	margin: 0 9%;
+	margin: 0 5%;
 }
+
+html,
+button,
+input,
+select,
+textarea{
+	color: #222;
+}
+
+::-moz-selection{
+	background-color: #b3d4fc;
+}
+
 
 #header, .content aside, #footer{
 	background-color: #f16529;
@@ -26,6 +39,8 @@ body{
 
 .title{
 	color: white;
+	margin: 0;
+	padding: 20px;
 }
 
 nav ul{
@@ -63,5 +78,84 @@ nav a:hover{
 
 .content aside{
 	color: #fff;
+	padding: 0 5% 10px;
+}
+
+/* FOOTER */
+
+#footer .wrap{
+	color: #fff;
 	padding: 20px 0;
+}
+
+
+
+/* MEDIA QUERIES */
+
+@media only screen and (min-width: 480px){
+
+	/* MENU */
+	nav a{
+		float: left;
+		width: 27%;
+		margin: 0 1.7%;
+		padding: 25px 2%;
+		margin-bottom: 0;
+	}
+
+	nav li:first-child a{
+		margin-left: 0;
+	}
+
+	nav li:last-child a{
+		margin-right: 0;
+	}
+}
+
+@media (min-width: 768px){
+	#header,
+	.content aside{
+		-webkit-box-shadow: 0 5px 10px #aaa;
+		   -moz-box-shadow: 0 5px 10px #aaa;
+				box-shadow: 0 5px 10px #aaa;
+	}
+
+	.title{
+		float: left;
+	}
+	nav{
+		float: right;
+		width: 38%;
+	}
+
+	.content article{
+		float: left;
+		width: 57%;
+	}
+
+	.content aside{
+		float: right;
+		width: 28%;
+	}
+
+}
+
+@media (min-width: 1140px){
+	
+}
+
+ /* MISCELANEA */
+
+.clearfix:before,
+.clearfix:after{
+	content: " ";
+	display: table;	
+}
+
+.clearfix:after{
+	clear: both;
+}
+
+.clearfix{
+	*zoom:1;
 }
